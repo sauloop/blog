@@ -49,8 +49,8 @@
 
 				<div class="fakeimg">
 					<a href="https://inverenlace.com/"><img
-						src="<c:url value="${article.image}" />" alt="Inverenlace"
-						style="width: 800px;" /></a>
+						src="${pageContext.request.contextPath}${article.image}" />"
+						alt="Inverenlace" style="width: 800px;" /></a>
 				</div>
 
 				<!-- 				<div> -->
