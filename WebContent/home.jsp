@@ -48,8 +48,7 @@
 				<br>
 
 				<div class="fakeimg">
-					<a href="https://inverenlace.com/"><img
-						src="${servletContext.getResource('/WEB-INF/resources/img/inveren.jpg')}"
+					<a href="https://inverenlace.com/"><img src="img/inveren.jpg"
 						alt="Inverenlace" style="width: 800px;" /></a>
 				</div>
 
