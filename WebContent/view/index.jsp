@@ -49,7 +49,7 @@
 
 				<div class="fakeimg">
 					<a href="https://inverenlace.com/"><img
-						src="${pageContext.request.contextPath}${article.image}"
+						src="http://www.pablogiraldo.info${article.image}"
 						alt="Inverenlace" style="width: 800px;" /></a>
 				</div>
 
