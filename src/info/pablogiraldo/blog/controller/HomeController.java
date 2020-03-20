@@ -80,7 +80,7 @@ public class HomeController extends HttpServlet {
 			throws SQLException, IOException, ServletException {
 		List<Article> listArticle = articleDAO.listAllArticles();
 		request.setAttribute("listArticle", listArticle);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("view/index.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
 		dispatcher.forward(request, response);
 	}
 
