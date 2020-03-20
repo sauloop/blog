@@ -49,7 +49,7 @@
 
 				<div class="fakeimg">
 					<a href="https://inverenlace.com/"><img
-						src="${servletContext.getRealPath('/')}/img/inveren.jpg"
+						src="${servletContext.getResource('/WEB-INF/resources/img/inveren.jpg')}"
 						alt="Inverenlace" style="width: 800px;" /></a>
 				</div>
 
