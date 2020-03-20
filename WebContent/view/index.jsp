@@ -8,7 +8,7 @@
 		<div class="col-sm-4">
 			<h2>Sobre mí</h2>
 			<div class="aboutimg">
-				<a href="files/cvPabloGiraldo.pdf"><img src="img/avatar.png"
+				<a href="pdf/cvPabloGiraldo.pdf"><img src="img/avatar.png"
 					alt="Avatar" title="Ver currículum" style="height: 200px;"></a>
 			</div>
 			<br>
