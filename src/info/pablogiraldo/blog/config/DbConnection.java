@@ -14,9 +14,9 @@ public class DbConnection {
 
 	// Prod
 
-	private static String url = "jdbc:mysql://r42ii9gualwp7i1y.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/lmupva5bdjr1mdw9";
-	private static String user = "wbbd4ix2tkuhv33q";
-	private static String pass = "syz56f5pn4im9fe1";
+	private static String url = "jdbc:mysql://gi6kn64hu98hy0b6.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/lmupva5bdjr1mdw9";
+	private static String user = "pvwbl8zr6yvbtynf";
+	private static String pass = "pippn1havhufqy9d";
 
 	public static Connection getConnection() {
 
