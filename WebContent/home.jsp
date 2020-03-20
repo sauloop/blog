@@ -48,7 +48,8 @@
 				<br>
 
 				<div class="fakeimg">
-					<a href="https://inverenlace.com/"><img src="img/inveren.jpg"
+					<a href="https://inverenlace.com/"><img
+						src="<%=request.getContextPath()%>/img/inveren.jpg"
 						alt="Inverenlace" style="width: 800px;" /></a>
 				</div>
 
