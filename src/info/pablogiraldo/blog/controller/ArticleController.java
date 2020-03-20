@@ -17,7 +17,7 @@ import info.pablogiraldo.blog.model.Article;
 /**
  * Servlet implementation class ArticleController
  */
-@WebServlet("/")
+@WebServlet("/articles")
 public class ArticleController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

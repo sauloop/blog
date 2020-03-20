@@ -36,6 +36,8 @@ public class HomeController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+//		request.getRequestDispatcher("/view/index.jsp").forward(request, response);
+
 		String action = request.getServletPath();
 
 		try {
@@ -78,7 +80,7 @@ public class HomeController extends HttpServlet {
 			throws SQLException, IOException, ServletException {
 		List<Article> listArticle = articleDAO.listAllArticles();
 		request.setAttribute("listArticle", listArticle);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("articleList.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("view/index.jsp");
 		dispatcher.forward(request, response);
 	}
 

@@ -35,8 +35,7 @@
 			<hr class="d-sm-none">
 		</div>
 		<div class="col-sm-8">
-
-			<!-- 			<img src="img/inveren.jpg" alt="Test" width="800" /> -->
+			<img src="img/inveren.jpg" alt="Test" width="800" />
 
 			<c:forEach var="article" items="${listArticle}">
 				<h2>
@@ -47,15 +46,6 @@
 				</h5>
 				<br>
 
-				<div class="fakeimg">
-					<a href="https://inverenlace.com/"><img
-						src="<c:url value="${article.image}" />" alt="Inverenlace"
-						style="width: 800px;" /></a>
-				</div>
-
-				<!-- 				<div> -->
-				<%-- 					<img src="<c:url value="${article.image}" />" /> --%>
-				<!-- 				</div> -->
 				<div>
 					<a href=<c:out value="${article.link}" />>holajava.herokuapp.com</a>
 				</div>
@@ -82,8 +72,8 @@
 			<!-- 			<h5>Página de anuncios, Feb 6, 2020</h5> -->
 			<!-- 			<br> -->
 			<!-- 			<div class="fakeimg"> -->
-			<!-- 				<a href="https://inverenlace.com/"><img src="img/inveren.jpg" -->
-			<!-- 					alt="Inverenlace" style="width: 800px;"></a> -->
+			<!-- 							<a href="https://inverenlace.com/"><img src="img/inveren.jpg" -->
+			<!-- 								alt="Inverenlace" style="width: 800px;"></a> -->
 			<!-- 			</div> -->
 			<!-- 			<br> -->
 			<!-- 			<p>En inverenlace seleccionamos información para un grupo de -->
