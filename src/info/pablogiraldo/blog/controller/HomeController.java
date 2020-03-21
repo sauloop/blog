@@ -78,10 +78,17 @@ public class HomeController extends HttpServlet {
 
 	private void listArticle(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
+		String fromController = "controller";
 		List<Article> listArticle = articleDAO.listAllArticles();
+
 		request.setAttribute("listArticle", listArticle);
+		request.setAttribute("fromController", fromController);
+
 		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
 		dispatcher.forward(request, response);
+
+//		request.setAttribute("fromController", fromController);
+//		request.getRequestDispatcher("home.jsp").forward(request, response);
 	}
 
 	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
