@@ -55,17 +55,15 @@ a:hover {
 
 <body>
 	<div class="jumbotron text-center" style="margin-bottom: 0;">
-		<h1>Pablo Giraldo</h1>
-		<h5 style="color: rgb(102, 102, 51);">Página de pruebas del curso
-			sobre desarrollo de aplicaciones web de Laborus</h5>
-		<!-- <p>
-            C/ SAN MENGANO 25 3º A - 49050 ZAMORA - 666 33 33 33 - <a href="mailto:name@email.com">FULANO@EMAIL.COM</a>
-        </p> -->
-		<!-- <h6><a href="https://github.com/sauloop">github.com/sauloop</a></h6> -->
+		<div>
+			<h1>Pablo Giraldo</h1>
+			<h5 style="color: rgb(102, 102, 51);">Página de pruebas del
+				curso sobre desarrollo de aplicaciones web de Laborus</h5>
+		</div>
+
 		<div class="d-flex justify-content-end">
 			<div>
 				<a href="https://github.com/sauloop" class="fa fa-github"></a>
-				<!-- <a href="https://bitbucket.org/saulop" class="fa fa-bitbucket"></a> -->
 			</div>
 		</div>
 	</div>
