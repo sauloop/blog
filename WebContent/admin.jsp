@@ -17,7 +17,7 @@
 <body>
 	<%
 		if (request.getAttribute("isAdmin") == null || !request.getAttribute("isAdmin").equals("admin")) {
-			response.sendRedirect(request.getContextPath() + "/home.jsp");
+			response.sendRedirect(request.getContextPath() + "/");
 		}
 	%>
 	<div class="container" style="margin-top: 30px">
