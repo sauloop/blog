@@ -4,7 +4,7 @@
 <html lang="es">
 
 <head>
-<title>Pablo Giraldo | panel de control</title>
+<title>Pablo Giraldo | administrar</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
@@ -17,17 +17,61 @@
 <body>
 	<%
 		if (request.getAttribute("isAdmin") == null || !request.getAttribute("isAdmin").equals("admin")) {
-			response.sendRedirect(request.getContextPath() + "/");
+			response.sendRedirect(request.getContextPath() + "/login");
 		}
 	%>
 	<div class="container" style="margin-top: 30px">
 		<div class="row justify-content-center">
-			<div class="col-sm-4">
+			<div class="col-sm-6">
+				<div class="d-flex justify-content-center">
+					<div>
+						<h1>Administrar</h1>
+					</div>
+				</div>
 				<br> <br>
-				<H1>Panel de control</H1>
+				<div class="d-flex justify-content-end">
+					<div>
+						<a href=<%=request.getContextPath()%>><strong>Cerrar
+								sesión</strong></a>
+					</div>
+				</div>
+				<br> <br>
+				<h3>Nuevo artículo</h3>
+				<br>
+				<div>
+					<form action="insert" method="post">
+						<div class="form-group">
+							<label for="title"><strong>Título</strong></label> <input
+								type="text" name="title" class="form-control" id="title">
+						</div>
+						<div class="form-group">
+							<label for="subtitle"><strong>Subtítulo</strong></label> <input
+								type="text" name="subtitle" class="form-control" id="subtitle">
+						</div>
+						<div class="form-group">
+							<label for="image"><strong>Imagen</strong></label> <input
+								type="text" name="image" class="form-control" id="image">
+						</div>
+						<div class="form-group">
+							<label for="link"><strong>Enlace</strong></label> <input
+								type="text" name="link" class="form-control" id="link">
+						</div>
+						<div class="form-group">
+							<label for="text"><strong>Texto</strong></label> <input
+								type="text" name="text" class="form-control" id="text">
+						</div>
+						<div class="d-flex justify-content-end">
+							<div>
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
+	<br>
+	<br>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script

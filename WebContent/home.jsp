@@ -14,7 +14,7 @@
 		<div class="col-sm-4">
 			<br>
 			<div>
-				<a href="login.jsp"><strong>Iniciar sesión</strong></a>
+				<a href="login"><strong>Iniciar sesión</strong></a>
 			</div>
 			<br> <br>
 

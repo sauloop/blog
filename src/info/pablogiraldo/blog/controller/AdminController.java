@@ -1,28 +1,33 @@
 package info.pablogiraldo.blog.controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
+//import java.util.List;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import info.pablogiraldo.blog.dao.ArticleDAO;
+import info.pablogiraldo.blog.model.Article;
 
 /**
- * Servlet implementation class AdminController
+ * Servlet implementation class ArticleController
  */
 @WebServlet("/admin")
 public class AdminController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static final String EMAIL = "fulano@email.com";
-	private static final String PASS = "secret";
+	private ArticleDAO articleDAO;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
-	public AdminController() {
-		super();
-		// TODO Auto-generated constructor stub
+	public void init() {
+
+		articleDAO = new ArticleDAO();
+
 	}
 
 	/**
@@ -31,7 +36,41 @@ public class AdminController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doPost(request, response);
+
+		HttpSession session = request.getSession(true);
+
+		if (session.getAttribute("userSession") != null && session.getAttribute("userSession").equals("loggedin")) {
+//			System.out.println(session.getAttribute("userSession"));
+			String isAdmin = "admin";
+			request.setAttribute("isAdmin", isAdmin);
+		}
+
+		String action = request.getServletPath();
+
+		try {
+			switch (action) {
+//			case "/admin":
+//				showNewForm(request, response);
+//				break;
+			case "/insert":
+				insertArticle(request, response);
+				break;
+			case "/delete":
+				deleteArticle(request, response);
+				break;
+			case "/edit":
+				showEditForm(request, response);
+				break;
+			case "/update":
+				updateArticle(request, response);
+				break;
+			default:
+				showNewForm(request, response);
+				break;
+			}
+		} catch (SQLException ex) {
+			throw new ServletException(ex);
+		}
 	}
 
 	/**
@@ -41,21 +80,76 @@ public class AdminController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
 
-		String email = request.getParameter("email");
-		String pass = request.getParameter("pass");
+//	private void listArticle(HttpServletRequest request, HttpServletResponse response)
+//			throws SQLException, IOException, ServletException {
+//		List<Article> listArticle = articleDAO.listAllArticles();
+//		request.setAttribute("listArticle", listArticle);
+//		RequestDispatcher dispatcher = request.getRequestDispatcher("articleList.jsp");
+//		dispatcher.forward(request, response);
+//	}
 
-		String isAdmin = "default";
+	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+//		String fromController = "controller";
+//		request.setAttribute("fromController", fromController);
 
-		if (email.equals(EMAIL) && pass.equals(PASS)) {
-			isAdmin = "admin";
-			request.setAttribute("isAdmin", isAdmin);
-			request.getRequestDispatcher("admin.jsp").forward(request, response);
-		}
+//		if (request.getParameter("loged").equals("true")) {
+//			String isAdmin = "controller";
+//			request.setAttribute("isAdmin", isAdmin);
+//		}
 
-		else {
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-		}
+		RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp");
+		dispatcher.forward(request, response);
+	}
+
+	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		Article existingArticle = articleDAO.getArticle(id);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("articleForm.jsp");
+		request.setAttribute("article", existingArticle);
+		dispatcher.forward(request, response);
+
+	}
+
+	private void insertArticle(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException {
+		String title = request.getParameter("title");
+		String subtitle = request.getParameter("subtitle");
+		String image = request.getParameter("image");
+		String link = request.getParameter("link");
+		String text = request.getParameter("text");
+
+		Article newArticle = new Article(title, subtitle, image, link, text);
+		articleDAO.insertArticle(newArticle);
+		response.sendRedirect("admin");
+	}
+
+	private void updateArticle(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+		String title = request.getParameter("title");
+		String subtitle = request.getParameter("subtitle");
+		String image = request.getParameter("image");
+		String link = request.getParameter("link");
+		String text = request.getParameter("text");
+
+		Article article = new Article(id, title, subtitle, image, link, text);
+		articleDAO.updateArticle(article);
+		response.sendRedirect("articles");
+	}
+
+	private void deleteArticle(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException {
+		int id = Integer.parseInt(request.getParameter("id"));
+
+		Article article = new Article(id);
+		articleDAO.deleteArticle(article);
+		response.sendRedirect("articles");
+
 	}
 
 }

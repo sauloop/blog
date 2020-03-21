@@ -4,7 +4,7 @@
 <html lang="es">
 
 <head>
-<title>Pablo Giraldo | login</title>
+<title>Pablo Giraldo | iniciar sesión</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
@@ -18,23 +18,33 @@
 	<div class="container" style="margin-top: 30px">
 		<div class="row justify-content-center">
 			<div class="col-sm-4">
+				<div class="d-flex justify-content-center">
+					<div>
+						<h1>Iniciar sesión</h1>
+					</div>
+				</div>
 				<br> <br>
 				<div>
-					<form action="admin" method="post">
+					<form action="login" method="post">
 						<div class="form-group">
-							<label for="email">Dirección de correo</label> <input
+							<label for="email"><strong>Dirección de correo</strong></label> <input
 								type="email" name="email" class="form-control" id="email">
 						</div>
 						<div class="form-group">
-							<label for="pass">Contraseña</label> <input type="password"
-								name="pass" class="form-control" id="pass">
+							<label for="pass"><strong>Contraseña</strong></label> <input
+								type="password" name="pass" class="form-control" id="pass">
 						</div>
-						<button type="submit" class="btn btn-primary">Enviar</button>
+						<div class="d-flex justify-content-end">
+							<div>
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+	<br>
 	<br>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import info.pablogiraldo.blog.dao.ArticleDAO;
 import info.pablogiraldo.blog.model.Article;
@@ -37,6 +38,9 @@ public class HomeController extends HttpServlet {
 			throws ServletException, IOException {
 
 //		request.getRequestDispatcher("/view/index.jsp").forward(request, response);
+
+		HttpSession session = request.getSession(true);
+		session.setAttribute("userSession", "loggedout");
 
 		String action = request.getServletPath();
 
