@@ -3,7 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%-- <%@ taglib prefix="portlet" uri="http://java.sun.com/portlet"%> --%>
 <%@include file="headerTemplate.jsp"%>
-
+<%
+	response.sendRedirect(request.getContextPath() + "/");
+%>
 <div class="container" style="margin-top: 30px">
 	<div class="row">
 		<div class="col-sm-4">
