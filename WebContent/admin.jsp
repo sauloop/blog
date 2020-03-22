@@ -29,8 +29,9 @@
 				<br> <br>
 				<div class="d-flex justify-content-end">
 					<div>
-						<a href=<%=request.getContextPath() + "?option=closeSession"%>><strong>Cerrar
-								sesión</strong></a>
+						<%-- 						<a href=<%=request.getContextPath() + "?option=closeSession"%>><strong>Cerrar --%>
+						<!-- 								sesión</strong></a>  -->
+						<a href="/?option=closeSession"><strong>Cerrar sesión</strong></a>
 					</div>
 				</div>
 				<br> <br>
