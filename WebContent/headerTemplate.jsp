@@ -77,8 +77,7 @@ a:hover {
 			<li class="nav-item"><a class="nav-link"
 				href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="http://pablogiraldo.info/files/cvPabloGiraldo.pdf" download>Descargar
-					currículum</a></li>
+				href="http://pablogiraldo.info/files/cvPabloGiraldo.pdf" download>Currículum</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="mailto:pablogirald@yahoo.es">Contacto</a></li>
 		</ul>
