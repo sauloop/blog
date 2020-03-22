@@ -29,17 +29,17 @@ public class ArticleDAO {
 		connection = getConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
 
-//		statement.setString(1, article.getTitle());
-//		statement.setString(2, article.getSubtitle());
-//		statement.setString(3, article.getImage());
-//		statement.setString(4, article.getLink());
-//		statement.setString(5, article.getText());
-
 		statement.setString(1, article.getTitle());
-		statement.setString(2, "Test subtitle");
-		statement.setString(3, "Test image");
-		statement.setString(4, "Test link");
-		statement.setString(5, "Test text");
+		statement.setString(2, article.getSubtitle());
+		statement.setString(3, article.getImage());
+		statement.setString(4, article.getLink());
+		statement.setString(5, article.getText());
+
+//		statement.setString(1, article.getTitle());
+//		statement.setString(2, "Test subtitle");
+//		statement.setString(3, "Test image");
+//		statement.setString(4, "Test link");
+//		statement.setString(5, "Test text");
 
 		boolean rowInserted = statement.executeUpdate() > 0;
 
@@ -100,19 +100,19 @@ public class ArticleDAO {
 		connection = getConnection();
 		PreparedStatement statement = connection.prepareStatement(sql);
 
-//		statement.setString(1, article.getTitle());
-//		statement.setString(2, article.getSubtitle());
-//		statement.setString(3, article.getImage());
-//		statement.setString(4, article.getLink());
-//		statement.setString(5, article.getText());
-//		statement.setInt(6, article.getId());
-
 		statement.setString(1, article.getTitle());
-		statement.setString(2, "Test subtitle");
-		statement.setString(3, "Test image");
-		statement.setString(4, "Test link");
-		statement.setString(5, "Test text");
+		statement.setString(2, article.getSubtitle());
+		statement.setString(3, article.getImage());
+		statement.setString(4, article.getLink());
+		statement.setString(5, article.getText());
 		statement.setInt(6, article.getId());
+
+//		statement.setString(1, article.getTitle());
+//		statement.setString(2, "Test subtitle");
+//		statement.setString(3, "Test image");
+//		statement.setString(4, "Test link");
+//		statement.setString(5, "Test text");
+//		statement.setInt(6, article.getId());
 
 		boolean rowUpdated = statement.executeUpdate() > 0;
 

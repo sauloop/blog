@@ -9,6 +9,7 @@ public class DbConnection {
 	// Dev
 
 	private static String url = "jdbc:mysql://localhost:3306/db_blog";
+//	private static String url = "jdbc:mysql://localhost:3306/db_blog_b?useUnicode=yes&characterEncoding=UTF-8";
 	private static String user = "root";
 	private static String pass = "";
 
@@ -19,7 +20,7 @@ public class DbConnection {
 //	private static String pass = "jb6i5e6gv772zidi";
 
 	// Prod blogwar
-	
+
 //	private static String url = "jdbc:mysql://sabaik6fx8he7pua.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/ktqz1wuhfsknweaa";
 //	private static String user = "gi339d995q304vv7";
 //	private static String pass = "cu4vwab283ehef6z";
@@ -32,6 +33,7 @@ public class DbConnection {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			conn = DriverManager.getConnection(url, user, pass);
+
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {

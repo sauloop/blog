@@ -1,18 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="es">
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pablo Giraldo | administrar</title>
-<meta charset="utf-8">
+<!-- <meta charset="utf-8"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
-<link rel="stylesheet" href="css/style.css?v=16">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" -->
+<!-- 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 <body>
 	<%
@@ -31,21 +29,22 @@
 				<br> <br>
 				<div class="d-flex justify-content-end">
 					<div>
-						<a href=<%=request.getContextPath()%>><strong>Cerrar
-								sesiÃ³n</strong></a>
+						<a href=<%=request.getContextPath() + "?option=closeSession"%>><strong>Cerrar
+								sesión</strong></a>
 					</div>
 				</div>
 				<br> <br>
-				<h3>Nuevo artÃ­culo</h3>
+				<h3>Nuevo artículo</h3>
 				<br>
 				<div>
-					<form action="insert" method="post">
+					<form action="admin" method="post">
+						<input type="hidden" name="option" value="insert">
 						<div class="form-group">
-							<label for="title"><strong>TÃ­tulo</strong></label> <input
+							<label for="title"><strong>Título</strong></label> <input
 								type="text" name="title" class="form-control" id="title">
 						</div>
 						<div class="form-group">
-							<label for="subtitle"><strong>SubtÃ­tulo</strong></label> <input
+							<label for="subtitle"><strong>Subtítulo</strong></label> <input
 								type="text" name="subtitle" class="form-control" id="subtitle">
 						</div>
 						<div class="form-group">
