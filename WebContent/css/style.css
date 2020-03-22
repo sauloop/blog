@@ -1,0 +1,28 @@
+.aboutimg {
+    height: 200px;
+    width: 170px;
+}
+
+.fakeimg {
+    height: 200px;
+    overflow: hidden;
+}
+
+.aboutimg, .fakeimg {
+    background: #aaa;
+    border: 2px solid dodgerblue;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+div {
+    overflow-y: hidden!important;
+    overflow-x: hidden !important;
+}
