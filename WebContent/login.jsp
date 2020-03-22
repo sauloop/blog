@@ -1,40 +1,45 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="es">
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-<title>Pablo Giraldo | login</title>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Pablo Giraldo | iniciar sesión</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
-<link rel="stylesheet" href="css/style.css?v=16">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="container" style="margin-top: 30px">
 		<div class="row justify-content-center">
 			<div class="col-sm-4">
+				<div class="d-flex justify-content-center">
+					<div>
+						<h1>Iniciar sesión</h1>
+					</div>
+				</div>
 				<br> <br>
 				<div>
-					<form action="admin" method="post">
+					<form action="login" method="post">
 						<div class="form-group">
-							<label for="email">DirecciÃ³n de correo</label> <input
+							<label for="email"><strong>Dirección de correo</strong></label> <input
 								type="email" name="email" class="form-control" id="email">
 						</div>
 						<div class="form-group">
-							<label for="pass">ContraseÃ±a</label> <input type="password"
-								name="pass" class="form-control" id="pass">
+							<label for="pass"><strong>Contraseña</strong></label> <input
+								type="password" name="pass" class="form-control" id="pass">
 						</div>
-						<button type="submit" class="btn btn-primary">Enviar</button>
+						<div class="d-flex justify-content-end">
+							<div>
+								<button type="submit" class="btn btn-primary">Enviar</button>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+	<br>
 	<br>
 	<script
 		src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

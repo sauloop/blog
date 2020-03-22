@@ -1,20 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html lang="es">
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pablo Giraldo</title>
-<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="favicon.ico?v=1">
-<link rel="stylesheet" href="css/style.css?v=16">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!-- <script src="https://kit.fontawesome.com/29c6d8c025.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/bootstrap-social.css?v=2"> -->
 <style>
 /* .fakeimg {
             height: 200px;
@@ -57,7 +51,7 @@ a:hover {
 	<div class="jumbotron text-center" style="margin-bottom: 0;">
 		<div>
 			<h1>Pablo Giraldo</h1>
-			<h5 style="color: rgb(102, 102, 51);">PÃ¡gina de pruebas del
+			<h5 style="color: rgb(102, 102, 51);">Página de pruebas del
 				curso sobre desarrollo de aplicaciones web de Laborus</h5>
 		</div>
 
@@ -68,24 +62,24 @@ a:hover {
 		</div>
 	</div>
 
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<a class="navbar-brand" href="index.html">Inicio</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse"
-			data-target="#collapsibleNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link"
-					href="https://inverenlace.com/">App inverenlace</a></li>
-				<li class="nav-item"><a class="nav-link" href="trueknic.html">App
-						trueknic</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="files/cvPabloGiraldo.pdf" download>Descargar currÃ­culum</a></li>
-				<li class="nav-item"><a class="nav-link"
-					href="mailto:pablogirald@yahoo.es">Contacto</a></li>
-			</ul>
-		</div>
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> <a
+		class="navbar-brand" href="home.jsp">Inicio</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#collapsibleNavbar">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link"
+				href="https://inverenlace.com/">App inverenlace</a></li>
+			<li class="nav-item"><a class="nav-link" href="trueknic.html">App
+					trueknic</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="files/cvPabloGiraldo.pdf" download>Descargar currículum</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="mailto:pablogirald@yahoo.es">Contacto</a></li>
+		</ul>
+	</div>
 	</nav>

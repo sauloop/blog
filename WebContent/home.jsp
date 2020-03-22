@@ -1,7 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%-- <%@ taglib prefix="portlet" uri="http://java.sun.com/portlet"%> --%>
 <%@include file="headerTemplate.jsp"%>
 <%
 	if (request.getAttribute("fromController") == null
@@ -14,14 +10,14 @@
 		<div class="col-sm-4">
 			<br>
 			<div>
-				<a href="login.jsp"><strong>Iniciar sesiÃ³n</strong></a>
+				<a href="login"><strong>Iniciar sesión</strong></a>
 			</div>
 			<br> <br>
 
-			<!-- 			<h2>Sobre mÃ­</h2> -->
+			<!-- 			<h2>Sobre mí</h2> -->
 			<!-- 			<div class="aboutimg"> -->
 			<!-- 				<a href="pdf/cvPabloGiraldo.pdf"><img src="img/avatar.png" -->
-			<!-- 					alt="Avatar" title="Ver currÃ­culum" style="height: 200px;"></a> -->
+			<!-- 					alt="Avatar" title="Ver currículum" style="height: 200px;"></a> -->
 			<!-- 			</div> -->
 			<!-- 			<br> -->
 
