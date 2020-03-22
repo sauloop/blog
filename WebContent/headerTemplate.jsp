@@ -7,6 +7,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pablo Giraldo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
+<link rel="stylesheet" href="css/style.css?v=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -79,7 +81,7 @@ a:hover {
 			<li class="nav-item"><a class="nav-link"
 				href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li>
 			<li class="nav-item"><a class="nav-link"
-				href="http://pablogiraldo.info/files/cvPabloGiraldo.pdf" download>Currículum</a></li>
+				href="pdf/cvPabloGiraldo.pdf" download>Descargar currículum</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="mailto:pablogirald@yahoo.es">Contacto</a></li>
 		</ul>

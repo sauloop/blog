@@ -39,6 +39,9 @@
 		<br> <br>
 		<div class="col-sm-8">
 			<br>
+
+			<!-- 			<img src="img/mods.jpg" alt="Test" width="800"> -->
+
 			<c:forEach var="article" items="${listArticle}">
 				<div>
 					<div>
@@ -51,12 +54,11 @@
 					</div>
 					<br>
 
-					<!-- 					<div class="fakeimg"> -->
-					<!-- 						<a href="https://inverenlace.com/"><img -->
-					<%-- 							src="<%=request.getContextPath()%>/img/inveren.jpg" --%>
-					<!-- 							alt="Inverenlace" style="width: 800px;" /></a> -->
-					<!-- 					</div> -->
-
+					<div class="fakeimg">
+						<img src="img/<c:out value="${article.image}" />"
+							alt=<c:out value="${article.image}" /> style="width: 800px;" />
+					</div>
+					<br> <br>
 					<div>
 						<a href=<c:out value="${article.link}" />><c:out
 								value="${article.link}" /></a>
