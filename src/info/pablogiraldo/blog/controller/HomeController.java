@@ -57,7 +57,7 @@ public class HomeController extends HttpServlet {
 			option = "";
 		}
 
-		if (option.equals("closeSession")) {
+		if (option.equals("sessionClose")) {
 //			HttpSession session = request.getSession(true);
 			session.setAttribute("userSession", "loggedout");
 			request.setAttribute("isSessionInit", "false");
