@@ -39,6 +39,18 @@ public class HomeController extends HttpServlet {
 
 //		request.getRequestDispatcher("/view/index.jsp").forward(request, response);
 
+		request.setAttribute("isSessionInit", "false");
+//
+		HttpSession session = request.getSession(true);
+
+		if (session.getAttribute("userSession") != null && session.getAttribute("userSession").equals("loggedin")) {
+			request.setAttribute("isSessionInit", "true");
+		}
+
+//		if (session.getAttribute("userSession").equals("loggedin")) {
+//			request.setAttribute("isSessionInit", "true");
+//		}
+
 		String option = request.getParameter("option");
 
 		if (option == null) {
@@ -46,50 +58,18 @@ public class HomeController extends HttpServlet {
 		}
 
 		if (option.equals("closeSession")) {
-			HttpSession session = request.getSession(true);
+//			HttpSession session = request.getSession(true);
 			session.setAttribute("userSession", "loggedout");
+			request.setAttribute("isSessionInit", "false");
 		}
 
 		try {
+
 			listArticle(request, response);
 
 		} catch (SQLException ex) {
 			throw new ServletException(ex);
 		}
-
-//		String fromController = "controller";
-//		request.setAttribute("fromController", fromController);
-//		
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
-//		dispatcher.forward(request, response);
-
-//		String action = request.getServletPath();
-//		System.out.println(action);
-//
-//		try {
-//			switch (action) {
-//			case "/new":
-//				showNewForm(request, response);
-//				break;
-//			case "/insert":
-//				insertArticle(request, response);
-//				break;
-//			case "/delete":
-//				deleteArticle(request, response);
-//				break;
-//			case "/edit":
-//				showEditForm(request, response);
-//				break;
-//			case "/update":
-//				updateArticle(request, response);
-//				break;
-//			default:
-//				listArticle(request, response);
-//				break;
-//			}
-//		} catch (SQLException ex) {
-//			throw new ServletException(ex);
-//		}
 	}
 
 	/**
@@ -113,58 +93,5 @@ public class HomeController extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("home.jsp");
 		dispatcher.forward(request, response);
 	}
-//
-//	private void showNewForm(HttpServletRequest request, HttpServletResponse response)
-//			throws ServletException, IOException {
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("articleForm.jsp");
-//		dispatcher.forward(request, response);
-//	}
-//
-//	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
-//			throws SQLException, ServletException, IOException {
-//		int id = Integer.parseInt(request.getParameter("id"));
-//		Article existingArticle = articleDAO.getArticle(id);
-//		RequestDispatcher dispatcher = request.getRequestDispatcher("articleForm.jsp");
-//		request.setAttribute("article", existingArticle);
-//		dispatcher.forward(request, response);
-//
-//	}
-//
-//	private void insertArticle(HttpServletRequest request, HttpServletResponse response)
-//			throws SQLException, IOException {
-//		String title = request.getParameter("title");
-//		String subtitle = request.getParameter("subtitle");
-//		String image = request.getParameter("image");
-//		String link = request.getParameter("link");
-//		String text = request.getParameter("text");
-//
-//		Article newArticle = new Article(title, subtitle, image, link, text);
-//		articleDAO.insertArticle(newArticle);
-//		response.sendRedirect("articles");
-//	}
-//
-//	private void updateArticle(HttpServletRequest request, HttpServletResponse response)
-//			throws SQLException, IOException {
-//		int id = Integer.parseInt(request.getParameter("id"));
-//		String title = request.getParameter("title");
-//		String subtitle = request.getParameter("subtitle");
-//		String image = request.getParameter("image");
-//		String link = request.getParameter("link");
-//		String text = request.getParameter("text");
-//
-//		Article article = new Article(id, title, subtitle, image, link, text);
-//		articleDAO.updateArticle(article);
-//		response.sendRedirect("articles");
-//	}
-//
-//	private void deleteArticle(HttpServletRequest request, HttpServletResponse response)
-//			throws SQLException, IOException {
-//		int id = Integer.parseInt(request.getParameter("id"));
-//
-//		Article article = new Article(id);
-//		articleDAO.deleteArticle(article);
-//		response.sendRedirect("articles");
-//
-//	}
 
 }

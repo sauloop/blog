@@ -6,10 +6,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pablo Giraldo | iniciar sesión</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+strong {
+	font-size: 17px;
+}
+</style>
 </head>
 <body>
+	<%
+		if (request.getParameter("loggedIn") == null) {
+		response.sendRedirect(request.getContextPath());
+	}
+	%>
 	<div class="container" style="margin-top: 30px">
 		<div class="row justify-content-center">
 			<div class="col-sm-4">
@@ -29,7 +40,10 @@
 							<label for="pass"><strong>Contraseña</strong></label> <input
 								type="password" name="pass" class="form-control" id="pass">
 						</div>
-						<div class="d-flex justify-content-end">
+						<div class="d-flex justify-content-between">
+							<div>
+								<a href="<%=request.getContextPath()%>"><strong>Inicio</strong></a>
+							</div>
 							<div>
 								<button type="submit" class="btn btn-primary">Enviar</button>
 							</div>

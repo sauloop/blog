@@ -1,16 +1,30 @@
 <%@include file="headerTemplate.jsp"%>
 <%
-	if (request.getAttribute("fromController") == null
-			|| !request.getAttribute("fromController").equals("controller")) {
-		response.sendRedirect(request.getContextPath() + "/");
-	}
+	if (request.getAttribute("fromController") == null) {
+	response.sendRedirect(request.getContextPath());
+}
+
+String isSessionInit = request.getAttribute("isSessionInit") != null ? (String) request.getAttribute("isSessionInit")
+		: "";
 %>
 <div class="container" style="margin-top: 30px">
 	<div class="row">
 		<div class="col-sm-4">
 			<br>
 			<div>
-				<a href="login"><strong>Iniciar sesión</strong></a>
+				<%
+					if (isSessionInit.equals("false")) {
+				%>
+				<a href="login?loggedIn=false"><strong>Iniciar sesión</strong></a>
+				<%
+					} else {
+				%>
+				<a href="admin"><strong>Administrar</strong></a><br> <br>
+				<a href="<%=request.getContextPath()%>/?option=closeSession"><strong>Cerrar
+						sesión</strong></a>
+				<%
+					}
+				%>
 			</div>
 			<br> <br>
 
