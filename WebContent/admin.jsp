@@ -7,41 +7,45 @@
 <title>Pablo Giraldo | administrar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
+<link rel="stylesheet" href="css/style.css?v=12">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<style>
-strong {
-	font-size: 17px;
-}
-</style>
 </head>
 <body>
 	<%
 		if (request.getAttribute("isAdmin") == null) {
 		// 		response.sendRedirect(request.getContextPath());
-		response.sendRedirect("/");
+		// 		response.sendRedirect("/");
+		response.sendRedirect(request.getContextPath() + "/");
 	}
+
+	String confirmation = request.getParameter("confirmation") != null ? (String) request.getParameter("confirmation") : "";
 	%>
 	<div class="container" style="margin-top: 30px">
 		<div class="row justify-content-center">
 			<div class="col-sm-6">
 				<div class="d-flex justify-content-center">
 					<div>
-						<h1>Administrar</h1>
+						<h3>Nuevo artículo</h3>
 					</div>
 				</div>
-				<br> <br>
+				<br>
 				<div class="d-flex justify-content-between">
 					<div>
-						<a href="/"><strong>Inicio</strong></a>
+						<%
+							if (confirmation.equals("inserted")) {
+						%>
+						<strong class="navlink" style="color: green;">Artículo
+							guardado</strong>
+						<%
+							}
+						%>
 					</div>
 					<div>
-						<a href="<%=request.getContextPath()%>/?option=closeSession"><strong>Cerrar
-								sesión</strong></a>
+						<a href="<%=request.getContextPath()%>/?option=sessionClose"><strong
+							class="navlink">Cerrar sesión</strong></a>
 					</div>
 				</div>
-				<br> <br>
-				<h3>Nuevo artículo</h3>
 				<br>
 				<div>
 					<form action="admin" method="post">
@@ -67,7 +71,12 @@ strong {
 							<label for="text"><strong>Texto</strong></label> <input
 								type="text" name="text" class="form-control" id="text">
 						</div>
-						<div class="d-flex justify-content-end">
+						<div class="d-flex justify-content-between">
+							<div>
+								<a href="<%=request.getContextPath()%>/"><strong
+									class="navlink">Inicio</strong></a>
+							</div>
+
 							<div>
 								<button type="submit" class="btn btn-primary">Enviar</button>
 							</div>

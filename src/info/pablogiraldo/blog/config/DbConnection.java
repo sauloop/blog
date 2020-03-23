@@ -10,9 +10,9 @@ public class DbConnection {
 
 	// Dev
 
-//	private static String url = "jdbc:mysql://localhost:3306/db_blog";
-//	private static String user = "root";
-//	private static String pass = "";
+//private static String url = "jdbc:mysql://localhost:3306/db_blog";
+//private static String user = "root";
+//private static String pass = "";
 
 	// Prod pruebasblog
 

@@ -7,19 +7,16 @@
 <title>Pablo Giraldo | iniciar sesión</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
+<link rel="stylesheet" href="css/style.css?v=12">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<style>
-strong {
-	font-size: 17px;
-}
-</style>
 </head>
 <body>
 	<%
 		if (request.getParameter("loggedIn") == null) {
 		// 		response.sendRedirect(request.getContextPath());
-		response.sendRedirect("/");
+		// 		response.sendRedirect("/");
+		response.sendRedirect(request.getContextPath() + "/");
 	}
 	%>
 	<div class="container" style="margin-top: 30px">
@@ -27,10 +24,10 @@ strong {
 			<div class="col-sm-4">
 				<div class="d-flex justify-content-center">
 					<div>
-						<h1>Iniciar sesión</h1>
+						<h3>Iniciar sesión</h3>
 					</div>
 				</div>
-				<br> <br>
+				<br>
 				<div>
 					<form action="login" method="post">
 						<div class="form-group">
@@ -43,7 +40,8 @@ strong {
 						</div>
 						<div class="d-flex justify-content-between">
 							<div>
-								<a href="/"><strong>Inicio</strong></a>
+								<a href="<%=request.getContextPath()%>/"><strong
+									class="navlink">Inicio</strong></a>
 							</div>
 							<div>
 								<button type="submit" class="btn btn-primary">Enviar</button>

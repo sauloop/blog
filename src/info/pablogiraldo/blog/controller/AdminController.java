@@ -146,9 +146,11 @@ public class AdminController extends HttpServlet {
 
 		Article newArticle = new Article(title, subtitle, image, link, text);
 		articleDAO.insertArticle(newArticle);
-//		response.sendRedirect("admin.jsp");
+//		response.sendRedirect("admin.jsp?confirmation=inserted");
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp");
+//		request.setAttribute("confirmation", "inserted");
+//		RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp?confirmation=inserted");
 		try {
 			dispatcher.forward(request, response);
 		} catch (ServletException e) {
