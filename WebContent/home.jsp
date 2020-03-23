@@ -1,13 +1,12 @@
 <%@include file="headerTemplate.jsp"%>
 <%
 	if (request.getAttribute("fromController") == null) {
-		// 	response.sendRedirect(request.getContextPath());
-		response.sendRedirect("/");
-	}
+	// 	response.sendRedirect(request.getContextPath());
+	response.sendRedirect("/");
+}
 
-	String isSessionInit = request.getAttribute("isSessionInit") != null
-	? (String) request.getAttribute("isSessionInit")
-	: "";
+String isSessionInit = request.getAttribute("isSessionInit") != null ? (String) request.getAttribute("isSessionInit")
+		: "";
 %>
 <div class="container" style="margin-top: 30px">
 	<div class="row">

@@ -18,8 +18,8 @@ strong {
 <body>
 	<%
 		if (request.getAttribute("isAdmin") == null) {
-		// 		response.sendRedirect(request.getContextPath() + "/login");
-		response.sendRedirect(request.getContextPath());
+		// 		response.sendRedirect(request.getContextPath());
+		response.sendRedirect("/");
 	}
 	%>
 	<div class="container" style="margin-top: 30px">
@@ -33,7 +33,7 @@ strong {
 				<br> <br>
 				<div class="d-flex justify-content-between">
 					<div>
-						<a href="<%=request.getContextPath()%>"><strong>Inicio</strong></a>
+						<a href="/"><strong>Inicio</strong></a>
 					</div>
 					<div>
 						<a href="<%=request.getContextPath()%>/?option=closeSession"><strong>Cerrar

@@ -49,7 +49,7 @@ a:hover {
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> <a
-		class="navbar-brand" href=<%=request.getContextPath()%>>Inicio</a>
+		class="navbar-brand" href="/">Inicio</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#collapsibleNavbar">
 		<span class="navbar-toggler-icon"></span>

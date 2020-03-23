@@ -10,7 +10,8 @@
 <body>
 	<%
 		if (exception.getMessage() == null) {
-		response.sendRedirect(request.getContextPath());
+		// 		response.sendRedirect(request.getContextPath());
+		response.sendRedirect("/");
 	}
 	%>
 	<br />

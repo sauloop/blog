@@ -18,7 +18,8 @@ strong {
 <body>
 	<%
 		if (request.getParameter("loggedIn") == null) {
-		response.sendRedirect(request.getContextPath());
+		// 		response.sendRedirect(request.getContextPath());
+		response.sendRedirect("/");
 	}
 	%>
 	<div class="container" style="margin-top: 30px">
@@ -42,7 +43,7 @@ strong {
 						</div>
 						<div class="d-flex justify-content-between">
 							<div>
-								<a href="<%=request.getContextPath()%>"><strong>Inicio</strong></a>
+								<a href="/"><strong>Inicio</strong></a>
 							</div>
 							<div>
 								<button type="submit" class="btn btn-primary">Enviar</button>
