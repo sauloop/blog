@@ -1,9 +1,7 @@
 <div class="jumbotron text-center" style="margin-bottom: 0">
-	<!-- <p>&copy; 2020 Pablo Giraldo.</p> -->
 	<div class="d-flex justify-content-center">
 		<div>
 			<a href="https://github.com/sauloop" class="fa fa-github"></a>
-			<!-- <a href="https://bitbucket.org/saulop" class="fa fa-bitbucket"></a> -->
 		</div>
 	</div>
 </div>
