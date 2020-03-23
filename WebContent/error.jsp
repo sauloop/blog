@@ -5,12 +5,22 @@
 <html>
 <head>
 <title>Error</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
 </head>
 <body>
-	<center>
-		<h1>Error</h1>
-		<h2><%=exception.getMessage()%><br />
-		</h2>
-	</center>
+	<%
+		if (exception.getMessage() == null) {
+		response.sendRedirect(request.getContextPath());
+	}
+	%>
+	<br />
+	<div style="text-align: center; font-family: arial;">
+		<div>
+			<h1>Error</h1>
+			<h2><%=exception.getMessage()%><br />
+			</h2>
+		</div>
+	</div>
+
 </body>
 </html>

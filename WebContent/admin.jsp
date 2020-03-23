@@ -5,18 +5,22 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pablo Giraldo | administrar</title>
-<!-- <meta charset="utf-8"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<!-- <link rel="stylesheet" -->
-<!-- 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<style>
+strong {
+	font-size: 17px;
+}
+</style>
 </head>
 <body>
 	<%
-		if (request.getAttribute("isAdmin") == null || !request.getAttribute("isAdmin").equals("admin")) {
-			response.sendRedirect(request.getContextPath() + "/login");
-		}
+		if (request.getAttribute("isAdmin") == null) {
+		// 		response.sendRedirect(request.getContextPath() + "/login");
+		response.sendRedirect(request.getContextPath());
+	}
 	%>
 	<div class="container" style="margin-top: 30px">
 		<div class="row justify-content-center">
@@ -27,11 +31,13 @@
 					</div>
 				</div>
 				<br> <br>
-				<div class="d-flex justify-content-end">
+				<div class="d-flex justify-content-between">
 					<div>
-						<%-- 						<a href=<%=request.getContextPath() + "?option=closeSession"%>><strong>Cerrar --%>
-						<!-- 								sesión</strong></a>  -->
-						<a href="/?option=closeSession"><strong>Cerrar sesión</strong></a>
+						<a href="<%=request.getContextPath()%>"><strong>Inicio</strong></a>
+					</div>
+					<div>
+						<a href="<%=request.getContextPath()%>/?option=closeSession"><strong>Cerrar
+								sesión</strong></a>
 					</div>
 				</div>
 				<br> <br>
@@ -42,7 +48,8 @@
 						<input type="hidden" name="option" value="insert">
 						<div class="form-group">
 							<label for="title"><strong>Título</strong></label> <input
-								type="text" name="title" class="form-control" id="title">
+								type="text" name="title" class="form-control" id="title"
+								required>
 						</div>
 						<div class="form-group">
 							<label for="subtitle"><strong>Subtítulo</strong></label> <input

@@ -8,30 +8,12 @@
 <title>Pablo Giraldo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
-<link rel="stylesheet" href="css/style.css?v=1">
+<link rel="stylesheet" href="css/style.css?v=8">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-/* .fakeimg {
-            height: 200px;
-            background: #aaa;
-        } */
-/* .fa-github,
-        .fa-bitbucket {
-            color: rgb(102, 102, 51);
-            padding: 0px;
-            font-size: 40px;
-            width: 50px;
-            text-align: center;
-            margin: 5px 2px;
-        } */
-.fakeimg {
-	height: 200px;
-	overflow: hidden;
-}
-
 .fa-github {
 	color: rgb(102, 102, 51);
 	padding: 0px;
@@ -67,7 +49,7 @@ a:hover {
 	</div>
 
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> <a
-		class="navbar-brand" href="home.jsp">Inicio</a>
+		class="navbar-brand" href=<%=request.getContextPath()%>>Inicio</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#collapsibleNavbar">
 		<span class="navbar-toggler-icon"></span>
