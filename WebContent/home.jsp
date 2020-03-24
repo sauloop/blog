@@ -11,7 +11,7 @@ String isSessionInit = request.getAttribute("isSessionInit") != null ? (String) 
 <div class="container" style="margin-top: 30px">
 	<div class="row">
 		<div class="col-sm-4">
-			<br>
+			<br />
 			<div>
 				<%
 					if (isSessionInit.equals("false")) {
@@ -29,7 +29,7 @@ String isSessionInit = request.getAttribute("isSessionInit") != null ? (String) 
 					}
 				%>
 			</div>
-			<br> <br>
+			<br /> <br />
 
 			<!-- 			<h2>Sobre mí</h2> -->
 			<!-- 			<div class="aboutimg"> -->
@@ -53,46 +53,61 @@ String isSessionInit = request.getAttribute("isSessionInit") != null ? (String) 
 			</ul>
 			<!-- 			<hr class="d-sm-none"> -->
 		</div>
-		<br> <br>
+		<br /> <br />
 		<div class="col-sm-8">
-			<br>
-
-			<!-- 			<img src="img/mods.jpg" alt="Test" width="800"> -->
-
+			<br />
 			<c:forEach var="article" items="${listArticle}">
 				<div>
-					<div>
-						<h2>
-							<c:out value="${article.title}" />
-						</h2>
-						<h5>
-							<c:out value="${article.subtitle}" />
-						</h5>
-					</div>
-					<br>
+					<c:if test="${not empty article.title}">
+						<div>
+							<h2>
+								<c:out value="${article.title}" />
+							</h2>
+						</div>
+					</c:if>
 
-					<div class="fakeimg">
-						<img src="img/<c:out value="${article.image}" />"
-							alt=<c:out value="${article.image}" /> style="width: 800px;" />
-					</div>
-					<br> <br>
-					<div>
-						<a href=<c:out value="${article.link}" />><c:out
-								value="${article.link}" /></a>
-					</div>
-					<br>
+					<c:if test="${not empty article.subtitle}">
+						<div>
+							<h5>
+								<c:out value="${article.subtitle}" />
+							</h5>
+						</div>
+						<br />
+					</c:if>
 
-					<div>
-						<p>
-							<c:out value="${article.text}" />
-						</p>
-					</div>
+					<c:if test="${not empty article.image}">
+						<br />
+						<div class="fakeimg">
+							<img src="img/<c:out value="${article.image}" />"
+								alt=<c:out value="${article.image}" /> style="width: 800px;" />
+						</div>
+						<br />
+					</c:if>
+
+					<c:if test="${not empty article.link}">
+						<br />
+						<div>
+							<a href=<c:out value="${article.link}" />> <c:out
+									value="${article.link}" /></a>
+						</div>
+						<br />
+					</c:if>
+
+					<c:if test="${not empty article.text}">
+						<br />
+						<div>
+							<p>
+								<c:out value="${article.text}" />
+							</p>
+						</div>
+						<br />
+					</c:if>
 				</div>
-				<br>
-				<br>
+				<br />
 			</c:forEach>
 		</div>
 	</div>
 </div>
-<br>
+<br />
+<br />
 <%@include file="footerTemplate.jsp"%>
