@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Pablo Giraldo | iniciar sesión</title>
+<title>Pablo Giraldo | Iniciar sesión</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
 <link rel="stylesheet" href="css/style.css?v=16">
