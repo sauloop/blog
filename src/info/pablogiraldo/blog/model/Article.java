@@ -1,6 +1,6 @@
 package info.pablogiraldo.blog.model;
 
-public class Article {
+public class Article implements Comparable<Article> {
 
 	private int id;
 	private String title;
@@ -79,5 +79,11 @@ public class Article {
 
 	public void setText(String text) {
 		this.text = text;
+	}
+
+	@Override
+	public int compareTo(Article comparearticle) {
+		int compareids = ((Article) comparearticle).getId();
+		return compareids - this.id;
 	}
 }
