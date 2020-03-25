@@ -70,8 +70,8 @@
 								type="text" name="link" class="form-control" id="link">
 						</div>
 						<div class="form-group">
-							<label for="text"><strong>Texto</strong></label> <input
-								type="text" name="text" class="form-control" id="text">
+							<label for="text"><strong>Texto</strong></label>
+							<textarea name="text" class="form-control" id="text"></textarea>
 						</div>
 						<div class="d-flex justify-content-between">
 							<div>
