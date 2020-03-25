@@ -58,8 +58,8 @@ a:hover {
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="nav-link"
 				href="https://inverenlace.com/">App inverenlace</a></li>
-			<!-- 			<li class="nav-item"><a class="nav-link" href="trueknic.html">App -->
-			<!-- 					trueknic</a></li> -->
+			<li class="nav-item"><a class="nav-link" href="trueknic.jsp">App
+					trueknic</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li>
 			<li class="nav-item"><a class="nav-link"
