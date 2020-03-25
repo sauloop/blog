@@ -16,7 +16,7 @@ public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private static final String EMAIL = "fulano@email.com";
-	private static final String PASS = "secret";
+	private static final String PASS = "secreto741";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
@@ -41,28 +41,14 @@ public class LoginController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
 
 		String email = request.getParameter("email");
 		String pass = request.getParameter("pass");
 
-//		String isAdmin = "default";
-
 		if (email != null && pass != null && email.equals(EMAIL) && pass.equals(PASS)) {
-//			String isAdmin = "admin";
-//			request.setAttribute("isAdmin", isAdmin);
-//			request.getRequestDispatcher("admin.jsp").forward(request, response);
-
-//			request.getRequestDispatcher("admin").forward(request, response);
-
-//			HttpSession session = request.getSession();
-//			String username = (String) request.getAttribute("un");
-//			session.setAttribute("UserName", username);
 
 			HttpSession session = request.getSession(true);
 			session.setAttribute("userSession", "loggedin");
-
-//			System.out.println(session.getAttribute("userSession"));
 
 			response.sendRedirect("admin");
 		}
