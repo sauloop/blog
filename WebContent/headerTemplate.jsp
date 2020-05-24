@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Pablo Giraldo | Inicio</title>
+<title>App prueba | Inicio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" type="image/x-icon" href="img/favicon.ico?v=1">
-<link rel="stylesheet" href="css/style.css?v=16">
+<link rel="stylesheet" href="css/style.css?v=19">
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet"
@@ -34,11 +34,11 @@ a:hover {
 </head>
 
 <body>
-	<div class="jumbotron text-center" style="margin-bottom: 0;">
+	<div class="jumbotron text-center"
+		style="margin-bottom: 0; background-color: White;">
 		<div>
-			<h1>Pablo Giraldo</h1>
-			<h5 style="color: rgb(102, 102, 51);">Página de pruebas del
-				curso sobre desarrollo de aplicaciones web de Laborus</h5>
+			<h1>App prueba</h1>
+			<h5 style="color: rgb(102, 102, 51);">Prueba aplicación JavaEE</h5>
 		</div>
 
 		<div class="d-flex justify-content-end">
@@ -62,10 +62,10 @@ a:hover {
 					trueknic</a></li>
 			<li class="nav-item"><a class="nav-link"
 				href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="pdf/cvPabloGiraldo.pdf" download>Descargar currículum</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="mailto:pablogirald@yahoo.es">Contacto</a></li>
+			<!-- 			<li class="nav-item"><a class="nav-link" -->
+			<!-- 				href="pdf/cvPabloGiraldo.pdf" download>Descargar currículum</a></li> -->
+			<!-- 			<li class="nav-item"><a class="nav-link" -->
+			<!-- 				href="mailto:pablogirald@yahoo.es">Contacto</a></li> -->
 		</ul>
 	</div>
 	</nav>
