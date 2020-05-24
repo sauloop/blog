@@ -15,8 +15,8 @@ import javax.servlet.http.HttpSession;
 public class LoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	private static final String EMAIL = "fulano@email.com";
-	private static final String PASS = "secreto741";
+	private static final String EMAIL = "admin@prueba.com";
+	private static final String PASS = "secreto917";
 
 	/**
 	 * @see HttpServlet#HttpServlet()
