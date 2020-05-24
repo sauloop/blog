@@ -37,7 +37,7 @@ a:hover {
 	<div class="jumbotron text-center"
 		style="margin-bottom: 0; background-color: White;">
 		<div>
-			<h1>App prueba</h1>
+			<h1>App Java</h1>
 			<h5 style="color: rgb(102, 102, 51);">Prueba aplicación JavaEE</h5>
 		</div>
 
