@@ -15,6 +15,8 @@ import javax.servlet.http.HttpSession;
 import info.pablogiraldo.blog.dao.ArticleDAO;
 import info.pablogiraldo.blog.model.Article;
 
+// http://localhost:8080/blog/
+
 /**
  * Servlet implementation class ArticleController
  */
