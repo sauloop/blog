@@ -56,16 +56,8 @@ a:hover {
 	</button>
 	<div class="collapse navbar-collapse" id="collapsibleNavbar">
 		<ul class="navbar-nav">
-			<li class="nav-item"><a class="nav-link"
-				href="https://inverenlace.com/">App inverenlace</a></li>
 			<li class="nav-item"><a class="nav-link" href="trueknic.jsp">App
-					trueknic</a></li>
-			<!-- 			<li class="nav-item"><a class="nav-link" -->
-			<!-- 				href="https://es.gta5-mods.com/users/saulop">Mods juegos</a></li> -->
-			<!-- 			<li class="nav-item"><a class="nav-link" -->
-			<!-- 				href="pdf/cvPabloGiraldo.pdf" download>Descargar currículum</a></li> -->
-			<!-- 			<li class="nav-item"><a class="nav-link" -->
-			<!-- 				href="mailto:pablogirald@yahoo.es">Contacto</a></li> -->
+					test</a></li>
 		</ul>
 	</div>
 	</nav>
