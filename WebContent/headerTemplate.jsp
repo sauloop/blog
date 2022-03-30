@@ -58,6 +58,8 @@ a:hover {
 		<ul class="navbar-nav">
 			<li class="nav-item"><a class="nav-link" href="trueknic.jsp">App
 					test</a></li>
+                                                                        <li class="nav-item"><a class="nav-link" href="trueknic.jsp">App
+					test b</a></li>
 		</ul>
 	</div>
 	</nav>
